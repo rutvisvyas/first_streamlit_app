@@ -24,7 +24,8 @@ streamlit.write('The user entered ', fruit_choice)
 
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
-streamlit.dataframe (fruityvice_response)
+fruits_to_show1 = my_fruit_list.loc[fruityvice_response]
+streamlit.dataframe (fruits_to_show1)
 
 
 
