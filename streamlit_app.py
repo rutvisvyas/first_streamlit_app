@@ -25,7 +25,7 @@ streamlit.write('The user entered ', fruit_choice)
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
-fruits_selected1 = streamlit.select(list(fruityvice_response.index),['Kiwi'])
+fruits_selected1 = streamlit.select(list(my_fruit_list.index),['Kiwi'])
 streamlit.write(fruits_selected1)
 
 
