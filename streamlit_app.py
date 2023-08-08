@@ -26,9 +26,9 @@ import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
 fruits_selected1 = streamlit.select(list(fruityvice_response.index),['Kiwi'])
+streamlit.write(fruits_selected1)
 
-fruits_to_show1 = fruityvice_response.loc[fruits_selected1]
-streamlit.dataframe(fruits_to_show1)
+
 
 
 
